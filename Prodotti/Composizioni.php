@@ -1,24 +1,28 @@
 <?php 
+require_once 'Traits/traits.php';
  class Composizioni {
-     public $tipoFiori;
+
+    use DescrizioneArticolo;
+
+     public $nome;
      public $dimensione;
      public $prezzo;
 
-     function __construct( $_tipoFiori, $_dimensione, $_prezzo)
+     function __construct( $_nome, $_dimensione, $_prezzo)
      {
-         $this->tipoFiori = $_tipoFiori;
+         $this->nome = $_nome;
          $this->dimensione = $_dimensione;
          $this->prezzo = $_prezzo;
          
      }
      
-     function setTipoFiori($_tipoFiori)
+     function setTipoFiori($_nome)
     {
-        $this->tipoFiori = $_tipoFiori;
+        $this->nome = $_nome;
     }
     function getTipoFiori()
     {
-        return $this->tipoFiori;
+        return $this->nome;
     }
 
     function setDimensione($_dimensione)

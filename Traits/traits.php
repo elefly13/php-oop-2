@@ -14,4 +14,16 @@ trait Indirizzo {
             
     }
 }
+
+trait DescrizioneArticolo {
+    public $nome;
+    public $dimensione;
+    public $prezzo;
+
+    function getDescrizioneArticolo() {
+        return $this->nome . '<br/>' . $this->dimensione . '<br/>' . '€ ' . $this->prezzo;
+    }
+}
+
+
 ?>

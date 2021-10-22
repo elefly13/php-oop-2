@@ -1,24 +1,28 @@
 <?php 
+require_once 'Traits/traits.php';
  class Piante {
-     public $nomePianta;
+
+    use DescrizioneArticolo;
+
+     public $nome;
      public $dimensione;
      public $prezzo;
 
-     function __construct( $_nomePianta, $_dimensione, $_prezzo)
+     function __construct( $_nome, $_dimensione, $_prezzo)
      {
-         $this->nomePianta = $_nomePianta;
+         $this->nome = $_nome;
          $this->dimensione = $_dimensione;
          $this->prezzo = $_prezzo;
          
      }
      
-     function setNomePianta($_nomePianta)
+     function setNomePianta($_nome)
     {
-        $this->nomePianta = $_nomePianta;
+        $this->nome = $_nome;
     }
     function getNomePianta()
     {
-        return $this->nomePianta;
+        return $this->nome;
     }
 
     function setDimensione($_dimensione)

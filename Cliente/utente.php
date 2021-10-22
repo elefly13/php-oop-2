@@ -9,14 +9,16 @@ class Utente {
     public $nome;
     public $cognome;
     public $password;
+    public $premium;
 
 
-    function __construct($_email, $_nome, $_cognome, $_password)
+    function __construct($_email, $_nome, $_cognome, $_password, $_premium)
     {
         $this->email = $_email;
         $this->nome = $_nome;
         $this->cognome = $_cognome;
         $this->password = $_password;
+        $this->premium = $_premium;
     }
 
     function setEmail($_email)
@@ -57,6 +59,16 @@ class Utente {
     function getPassword()
     {
         return $this->password;
+    }
+
+    function setPremium($_premium)
+    {
+        $this->premium = $_premium;
+    }
+
+    function getPremium()
+    {
+        return $this->premium;
     }
 
    
