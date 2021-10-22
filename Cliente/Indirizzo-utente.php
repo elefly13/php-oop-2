@@ -1,6 +1,6 @@
 <?php
 require_once 'utente.php';
-require_once '../Traits/traits.php';
+require_once 'Traits/traits.php';
 
 class IndirizzoUtente extends Utente {
 
