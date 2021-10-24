@@ -9,16 +9,18 @@ class Utente {
     public $nome;
     public $cognome;
     public $password;
-    public $premium;
+    protected $premium = true;
+    public $sconto = 0;
 
 
-    function __construct($_email, $_nome, $_cognome, $_password, $_premium)
+    function __construct($_email, $_nome, $_cognome, $_password, $_premium, $_sconto)
     {
         $this->email = $_email;
         $this->nome = $_nome;
         $this->cognome = $_cognome;
         $this->password = $_password;
         $this->premium = $_premium;
+        $this->sconto = $_sconto;
     }
 
     function setEmail($_email)
@@ -71,8 +73,19 @@ class Utente {
         return $this->premium;
     }
 
-   
+    function setSconto($premium) {
 
+        if($premium == true) {
+            $this->sconto = 10;
+        }
+    }
+    function getSconto() {
+
+        return $this->sconto;
+    }
+
+   
+   
 }
 
 ?>

@@ -12,13 +12,19 @@ class IndirizzoUtente extends Utente {
     public $citta;
     public $paese;
 
-    function __construct( $_nomeStrada, $_numeroStrada, $_cap, $_citta, $_paese) {
+    function __construct( $_nomeStrada, $_numeroStrada, $_cap, $_citta, $_paese,$_email, $_nome, $_cognome, $_password, $_premium) {
 
         $this->nomeStrada = $_nomeStrada;
         $this->numeroStrada = $_numeroStrada;
         $this->cap = $_cap;
         $this->citta = $_citta;
         $this->paese = $_paese;
+
+        $this->email = $_email;
+        $this->nome = $_nome;
+        $this->cognome = $_cognome;
+        $this->password = $_password;
+        $this->premium = $_premium;
 
     }
 
